@@ -1,0 +1,10 @@
+# Generics
+*~
+*.lock
+*.DS_Store
+*.sublime-workspace
+
+# Logs
+logs
+*.log
+node_modules
