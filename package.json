@@ -1,0 +1,28 @@
+{
+    "name": "pacet",
+    "title": "P.A.C.E.T.",
+    "description": "pacet or Pixel Aspect Color Extraction Tool, is a web app which extracts color data from a given image, at a given point.",
+    "version": "1.0.0",
+    "author": {
+        "name": [ "Justin Wehrman" ],
+        "email": [ "jwehrman.wehr.haus@gmail.com" ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wehrhaus/pacet.git"
+    },
+    "readmeFilename": "README.md",
+    "devDependencies": {
+        "stylus": "*",
+        "nib": "*",
+        "grunt": "~0.4.1",
+        "matchdep": "~0.1.2",
+        "grunt-contrib-csslint": "*",
+        "grunt-contrib-jshint": "~0.5.4",
+        "grunt-contrib-stylus": "*",
+        "grunt-contrib-watch": "~0.4.0"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    }
+}
