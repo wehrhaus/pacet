@@ -30,19 +30,32 @@
         <div class="row">
             <section class="file_upload panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">File Upload</h3>
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-upload"></span> File Upload</h3>
                 </div>
 
                 <div class="panel-body">
-                    <button class="btn btn-default col-md-2" type="button"><span class="glyphicon glyphicon-upload"></span> Upload</button>
 
-                    <div class="col-md-10">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                60%
-                            </div>
+                    <input class="btn btn-default col-md-4 img_upload_browse" type="file" name="img_upload_browse" multiple />
+
+                    <div class="col-md-2">
+                        <p class="img_upload_option">OR</p>
+                    </div>
+
+                    <div class="input-group col-md-6">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+                        <input type="text" class="form-control img_upload_path" placeholder="Path to File">
+                    </div>
+
+                    <!-- <img src="" alt="thumbnail" class="img-rounded img-responsive img_upload_thumb hidden"> -->
+                    <div class="img_upload_thumb"></div>
+
+                    <div class="progress img_upload_progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            60%
                         </div>
                     </div>
+
+                    <button class="btn btn-default col-md-1 pull-right img_upload_submit" type="button">SUBMIT</button>
                 </div>
 
             </section>

@@ -1,12 +1,11 @@
 'use strict';
 
 require.config({
-
-    deps: [''],
+    baseUrl: 'common/js/modules/',
     enforceDefine: true,
     paths: {
-        'bootstrap': '../bootstrap/js/bootstrap.min',
-        'jquery': 'libs/jquery'
+        'bootstrap': '../../bootstrap/js/bootstrap.min',
+        'jquery': '../libs/jquery'
     },
     shim: {
         'bootstrap': {
@@ -20,7 +19,7 @@ require.config({
 
 });
 
-define(['modules/domReady', 'main'], function (domReady, main) {
+define(['domReady', '../main'], function (domReady, main) {
     domReady(function () {
         return main.init();
     });
