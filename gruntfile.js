@@ -17,7 +17,7 @@ module.exports = function (grunt) {
             'compress': false,
             'linenos': false, // set to 'true' WITH QUOTES to turn line numbers on
             'firebug': false,
-            'paths': [ 'common/stylus' ],
+            'paths': [ 'www/common/stylus' ],
             'include css': true,
             'use': [ require('nib') ],
             'import': [ 'nib' ]
@@ -31,24 +31,24 @@ module.exports = function (grunt) {
                 nospawn: false
             },
             stylus: {
-                files: [ 'common/stylus/**/*.styl'],
+                files: [ 'www/common/stylus/**/*.styl'],
                 tasks: [ 'stylus', 'csslint' ]
             },
             jshint: {
                 files: [
                     'gruntfile.js',
-                    'common/js/{,*/}*.js',
-                    'common/js/modules/{,*/}*.js',
-                    '!common/js/libs/*'
+                    'www/common/js/{,*/}*.js',
+                    'www/common/js/modules/{,*/}*.js',
+                    '!www/common/js/libs/*'
                 ],
                 tasks: [ 'jshint' ]
             },
             cssjs: {
                 files: [
                     '**/*.*html',
-                    'common/stylus/**/*.styl',
+                    'www/common/stylus/**/*.styl',
                     'gruntfile.js',
-                    'common/js/**/*.js'
+                    'www/common/js/**/*.js'
                 ],
                 tasks: [ 'stylus', 'csslint', 'jshint' ],
                 options: { livereload: true }
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
             compile: {
                 options: stylusOptions,
                 files: {
-                    'common/css/app.css': 'common/stylus/CONFIG.styl'
+                    'www/common/css/app.css': 'www/common/stylus/app.styl'
                 }
             }
         },
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
             options: {
                 csslintrc: '.csslintrc'
             },
-            src: [ 'common/css/app.css' ]
+            src: [ 'www/common/css/app.css' ]
         },
 
         jshint: {
@@ -77,9 +77,9 @@ module.exports = function (grunt) {
             },
             all: [
                 'gruntfile.js',
-                'common/js/{,*/}*.js',
-                'common/js/modules/{,*/}*.js',
-                '!common/js/libs/*'
+                'www/common/js/{,*/}*.js',
+                'www/common/js/modules/{,*/}*.js',
+                '!www/common/js/libs/*'
             ]
         }
 
