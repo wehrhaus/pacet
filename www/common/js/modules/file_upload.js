@@ -1,28 +1,38 @@
 define(['jquery', 'appData', 'bootstrap'], function ($, appData, bootstrap) {
     'use strict';
 
-    var readFile = function (fileData) {
+    return {
 
-        var reader = new FileReader();
-        reader.onload = (function(fileItem) {
-            return function(e) {
-                console.info('src: ', e.target.result);
-                console.info('name: ', escape(fileItem.name));
-            };
-        })(fileData);
-        // Read in the image file as a data URL.
-        reader.readAsDataURL(fileData);
-    };
+        clearFileInput: function (original, listener) {
+            var slug = document.createElement('input');
+            original.removeEventListener('click', listener, false);
+            original.removeEventListener('change', listener, false);
+            slug.type = 'file';
+            slug.name = original.name;
+            slug.className = original.className;
+            slug.accept = original.accept;
+            original.parentNode.replaceChild(slug, original);
+            appData.fileUpload.browse = slug;
+            return this;
+        },
 
-    return function (data) {
-        var i, f, files = data.target.files;
-
-        for(i = 0; i < files.length; i += 1) {
-            f = files[i];
-            if (f.type.match('image.*')) {
-                console.log(f);
-                readFile(f);
+        clearPathInput: function (field) {
+            var currVal = field.value;
+            if (currVal !== field.placeholder) {
+                field.value = '';
             }
+            return this;
+        },
+
+        pathUpload: function (data) {
+            console.log(data);
+            return this;
+        },
+
+        userUpload: function (data) {
+            var file = data.target.files;
+            console.log(file);
+            return this;
         }
 
     };

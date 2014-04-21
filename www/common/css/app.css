@@ -10,6 +10,6 @@ body {
 .file_upload .img_upload_progress {
   margin-top: 24px;
 }
-.file_upload .img_upload_submit {
-  margin-top: 12px;
+.file_upload .img_upload_warning {
+  margin-top: 20px;
 }

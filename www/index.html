@@ -13,9 +13,9 @@
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script>window.html5 || document.write('<script src="common/js/libs/html5shiv.js"><\/script>')</script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+js/1.3.0/respond.min.js"></script>
         <script>window.matchMedia || document.write('<script src="common/js/libs/respond.min.js"><\/script>')</script>
     <![endif]-->
 
@@ -30,32 +30,36 @@
         <div class="row">
             <section class="file_upload panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><span class="glyphicon glyphicon-upload"></span> File Upload</h3>
+                    <h3 class="panel-title">File Upload</h3>
                 </div>
 
-                <div class="panel-body">
+                <div class="upload panel-body">
 
-                    <input class="btn btn-default col-md-4 img_upload_browse" type="file" name="img_upload_browse" multiple />
+                    <input class="img_upload_browse hidden" type="file" name="img_upload_browse" accept="image/*">
+
+                    <button class="img_upload_browse_slug btn btn-default col-md-2"><span class="glyphicon glyphicon-upload"></span> Upload</button>
 
                     <div class="col-md-2">
                         <p class="img_upload_option">OR</p>
                     </div>
 
-                    <div class="input-group col-md-6">
+                    <div class="input-group col-md-8">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
                         <input type="text" class="form-control img_upload_path" placeholder="Path to File">
                     </div>
 
+                    <div class="img_upload_warning alert alert-warning col-md-12 hidden">Path supplied is not an image</div>
+
                     <!-- <img src="" alt="thumbnail" class="img-rounded img-responsive img_upload_thumb hidden"> -->
                     <div class="img_upload_thumb"></div>
 
-                    <div class="progress img_upload_progress">
+                    <div class="img_upload_progress progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
                             60%
                         </div>
                     </div>
 
-                    <button class="btn btn-default col-md-1 pull-right img_upload_submit" type="button">SUBMIT</button>
+                    <button class="img_upload_submit btn btn-default col-md-1 pull-right hidden" type="submit">SUBMIT</button>
                 </div>
 
             </section>
