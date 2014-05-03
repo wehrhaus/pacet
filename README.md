@@ -1,4 +1,4 @@
-# pacét
+# pacét - In Progress
 
 P.A.C.E.T. or Pixel Aspect Color Extraction Tool, is a web app which extracts color data from a given image, at a given point.
 
